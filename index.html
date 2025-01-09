@@ -1,5 +1,7 @@
-<html>
+<html lang="en">
  <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
    Encore Tweaks
   </title>
@@ -39,38 +41,41 @@
             justify-content: space-between;
             flex-wrap: wrap;
         }
-        .main-content h1 {
+        .main-content .text {
+            max-width: 600px;
+        }
+        .main-content h2 {
             font-size: 48px;
             color: #1a73e8;
             margin: 0;
         }
-        .main-content h2 {
+        .main-content h3 {
             font-size: 36px;
-            font-weight: 700;
+            color: #333333;
             margin: 10px 0;
         }
-        .main-content img {
-            max-width: 300px;
-            height: auto;
+        .main-content .buttons {
+            margin: 20px 0;
         }
-        .buttons {
-            margin-top: 20px;
-        }
-        .buttons a {
+        .main-content .buttons a {
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 20px;
             margin-right: 10px;
-            font-size: 14px;
+            font-size: 16px;
         }
-        .buttons a:first-child {
+        .main-content .buttons a:first-child {
             background-color: #1a73e8;
             color: #ffffff;
         }
-        .buttons a:nth-child(2),
-        .buttons a:nth-child(3) {
+        .main-content .buttons a:nth-child(2),
+        .main-content .buttons a:nth-child(3) {
             background-color: #e0e0e0;
             color: #333333;
+        }
+        .main-content img {
+            max-width: 300px;
+            height: auto;
         }
         .features {
             display: flex;
@@ -82,7 +87,7 @@
             background-color: #f5f5f5;
             border-radius: 10px;
             padding: 20px;
-            width: 48%;
+            width: calc(33% - 20px);
             margin-bottom: 20px;
             box-sizing: border-box;
         }
@@ -90,13 +95,13 @@
             width: 40px;
             height: 40px;
         }
-        .feature h3 {
-            font-size: 18px;
+        .feature h4 {
+            font-size: 20px;
             margin: 10px 0;
         }
         .feature p {
-            font-size: 14px;
-            margin: 0;
+            font-size: 16px;
+            color: #666666;
         }
         footer {
             text-align: center;
@@ -111,6 +116,9 @@
             }
             .main-content img {
                 margin-top: 20px;
+            }
+            .features {
+                flex-direction: column;
             }
             .feature {
                 width: 100%;
@@ -135,23 +143,19 @@
       Download
      </a>
      <a href="#">
-      <i class="fas fa-search">
-      </i>
-     </a>
-     <a href="#">
-      <i class="fas fa-user">
+      <i class="fab fa-github">
       </i>
      </a>
     </nav>
    </header>
    <div class="main-content">
-    <div>
-     <h1>
-      Encore Tweaks
-     </h1>
+    <div class="text">
      <h2>
-      Special performance module for your device
+      Encore Tweaks
      </h2>
+     <h3>
+      Special performance module for your device
+     </h3>
      <div class="buttons">
       <a href="#">
        What is Encore Tweaks?
@@ -164,59 +168,59 @@
       </a>
      </div>
     </div>
-    <img alt="Cartoon character with pink hair and a cute expression" height="300" src="https://storage.googleapis.com/a1aa/image/P9Uh6q1jnWqmPRlUoBe93IVB5m8bo00YLpcEaKwBSf5EWPDUA.jpg" width="300"/>
+    <img alt="Cartoon character with pink hair and a cute expression" height="300" src="https://storage.googleapis.com/a1aa/image/8RfYp7suEDX0MKtZ1lrLFFKoXpLzhw9q6wdenEwIfPf3t9MQB.jpg" width="300"/>
    </div>
    <div class="features">
     <div class="feature">
-     <img alt="Icon representing automation" height="40" src="https://storage.googleapis.com/a1aa/image/s6CTlRtPmfRJf0erStNvaB4eMBIRhfqeKOShrFMmjLQqfqnBKA.jpg" width="40"/>
-     <h3>
+     <img alt="Icon representing automation" height="40" src="https://storage.googleapis.com/a1aa/image/eaoTJoROIqxMPyj5thCM7PochxSfUuoJ4Xra3Wb0EQ3XbPDUA.jpg" width="40"/>
+     <h4>
       Fully Automatic
-     </h3>
+     </h4>
      <p>
       Encore Tweaks works by monitoring apps that you open and determine which performance profile should applied in that moment without any user settings.
      </p>
     </div>
     <div class="feature">
-     <img alt="Icon representing battery" height="40" src="https://storage.googleapis.com/a1aa/image/fV5qS0OviW1bQKjVCGzmXCf2KQHtziwym2z0L348DlsGWPDUA.jpg" width="40"/>
-     <h3>
+     <img alt="Icon representing battery" height="40" src="https://storage.googleapis.com/a1aa/image/AVZI2qfFMPzMMyNh9e88AroEqVE2A5vu8i7CYo2Lahxf2eMQB.jpg" width="40"/>
+     <h4>
       Don't suck on battery
-     </h3>
+     </h4>
      <p>
       Encore Tweaks only applies performance scripts when playing games, unlike other performance modules.
      </p>
     </div>
     <div class="feature">
-     <img alt="Icon representing compatibility" height="40" src="https://storage.googleapis.com/a1aa/image/T2e6gjjtsCS5EqFfekmaX70zfz3ybpjxRd7n12undYSiY9MQB.jpg" width="40"/>
-     <h3>
+     <img alt="Icon representing compatibility" height="40" src="https://storage.googleapis.com/a1aa/image/wsMVy5G1nroyHJc8bfwZAktaG3ECPP9Hucf6fm1099Bm2eMQB.jpg" width="40"/>
+     <h4>
       Universal SoC Compatibility
-     </h3>
+     </h4>
      <p>
-      Encore Tweaks support any devices, Snapdragon, MediaTek, Exynos, Google Tensor, Unisoc, even X86 and RISCV CPUs are supported.
+      Encore Tweaks support any devices, Snapdragon, MediaTek, Exynos, Google Tensor, Unisoc, even X86 and RISC-V CPUs are supported.
      </p>
     </div>
     <div class="feature">
-     <img alt="Icon representing prioritization" height="40" src="https://storage.googleapis.com/a1aa/image/3Tfr5dlbRsWzQiWDbvGjFeRgIwon7huR75tje7yWyBVBseMQB.jpg" width="40"/>
-     <h3>
+     <img alt="Icon representing gaming" height="40" src="https://storage.googleapis.com/a1aa/image/QNFif0Sa511FOS7gWHNMNJtgUJu1QopqJCcLjjU6CozstnBKA.jpg" width="40"/>
+     <h4>
       Game-First Prioritization
-     </h3>
+     </h4>
      <p>
       Encore Tweaks prioritizes games by allocating maximum CPU and I/O resources, ensuring seamless performance while gaming.
      </p>
     </div>
     <div class="feature">
-     <img alt="Icon representing web UI" height="40" src="https://storage.googleapis.com/a1aa/image/OSQVCX5WTvpcAZIYrlAlEoGwWZm87YzADcxTiXQkGNsi1zAF.jpg" width="40"/>
-     <h3>
+     <img alt="Icon representing web UI" height="40" src="https://storage.googleapis.com/a1aa/image/fR26NrvP1cyVW64WFWuKBaikroirLbhjOJCtqE904eabbPDUA.jpg" width="40"/>
+     <h4>
       Integrated WebUI
-     </h3>
+     </h4>
      <p>
       As the first performance module with a WebUI, Encore Tweaks makes it easy to configure settings and manage operations conveniently.
      </p>
     </div>
     <div class="feature">
-     <img alt="Icon representing safety" height="40" src="https://storage.googleapis.com/a1aa/image/muyq1PvMyuqqAZ99t4FcozsIZlJBjxaKX6vFIS7ehzRBrnBKA.jpg" width="40"/>
-     <h3>
+     <img alt="Icon representing safety" height="40" src="https://storage.googleapis.com/a1aa/image/HPhz2JdomCLpNVfDAqyVt2dj6O0zDzeJcxl8o7YCSfor2eMQB.jpg" width="40"/>
+     <h4>
       Safe for any devices
-     </h3>
+     </h4>
      <p>
       Encore Tweaks had zero bootloop and brick related incident reported since it was released.
      </p>
