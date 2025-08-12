@@ -202,18 +202,18 @@ p {
   color: #d9d9d9;
 }
 
-/* Portfolio Section */
-.portfolio {
+/* portofolio Section */
+.portofolio {
   background-color: #191919;
 }
 
-.portfolio-grid {
+.portofolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
-.portfolio-item {
+.portofolio-item {
   background-color: #262626;
   border-radius: 10px;
   overflow: hidden;
@@ -223,28 +223,28 @@ p {
   transform: scale(1);
 }
 
-.portfolio-item:hover {
+.portofolio-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.portfolio-image {
+.portofolio-image {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-image img {
+.portofolio-image img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-image img {
+.portofolio-item:hover .portofolio-image img {
   transform: scale(1.1);
 }
 
-.portfolio-overlay {
+.portofolio-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -258,11 +258,11 @@ p {
   transition: opacity 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-overlay {
+.portofolio-item:hover .portofolio-overlay {
   opacity: 1;
 }
 
-.portfolio-link {
+.portofolio-link {
   color: #e6e6e6;
   text-decoration: none;
   font-weight: 600;
@@ -272,27 +272,27 @@ p {
   transition: all 0.3s ease;
 }
 
-.portfolio-link:hover {
+.portofolio-link:hover {
   background-color: #e6e6e6;
   color: #1919e6;
 }
 
-.portfolio-content {
+.portofolio-content {
   padding: 1.5rem;
 }
 
-.portfolio-title {
+.portofolio-title {
   margin-bottom: 0.5rem;
   color: #d9d9d9;
 }
 
-.portfolio-description {
+.portofolio-description {
   color: #cccccc;
   margin-bottom: 1rem;
   font-size: 0.95rem;
 }
 
-.portfolio-tags {
+.portofolio-tags {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
@@ -335,7 +335,7 @@ p {
     padding: 4rem 0;
   }
 
-  .portfolio-grid {
+  .portofolio-grid {
     grid-template-columns: 1fr;
   }
 
