@@ -1,125 +1,113 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Modules</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .container {
-            padding: 20px;
-        }
-        .footer {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-top: 16px;
-        }
-        .footer a {
-            color: #1e90ff;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 14px;
-            margin-right: 8px;
-        }
-        .footer i {
-            color: #1e90ff;
-            font-size: 16px;
-        }
-        .header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .button {
-            font-size: 14px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-            border: 1px solid #00aaff;
-            border-radius: 8px;
-            color: #00aaff;
-            text-decoration: none;
-            margin-bottom: 20px;
-        }
-        .module {
-            background-color: #1e1e1e;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .name {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .version {
-            font-size: 14px;
-            color: #aaaaaa;
-            margin-bottom: 10px;
-        }
-        .description {
-            font-size: 14px;
-            color: #cccccc;
-            margin-bottom: 16px;
-        }
-        .thin-line {
-            border: none;
-            height: 1px;
-            background-color: #2e2e2e
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio website template - Modern minimalist design">
+    <meta name="keywords" content="portfolio, professional, designer, developer, minimalist">
+    <meta name="author" content="Your Name">
+    <title>HoyoSlave - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="header"><a href="https://github.com/HoyoSlave/hoyoslave.github.io" style="color: white; text-decoration: none;">HoyoSlave</a></div>
-        <a href="https://t.me/S_O_S_P" class="button">SOSP | Shell Open Source Project</a>
-        <div class="module">
-            <div class="name">AUTO-PRELOAD</div>
-            <div class="version">250728 by t.me/HoyoSlave</div>
-            <div class="description">smoother game performance by preloading game into memory</div>
-            <hr class="thin-line">
-            <div class="footer">
-                <a href="https://t.me/S_O_S_P/1284">Download</a>
-                <i class="fas fa-download"></i>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">A Z A Z E L</h1>
+                <p class="hero-subtitle">Creative & Problem Solver</p>
+                <p class="hero-description">Developing shell scripts to optimize and improve Android performance.</p>
+                <a href="#portfolio" class="cta-button">View Projects</a>
             </div>
         </div>
-        <div class="module">
-            <div class="name">CMD-TWEAKS</div>
-            <div class="version">250722 by t.me/HoyoSlave</div>
-            <div class="description">main project, there is much tweak being added, please wait until successful (every reboot)</div>
-            <hr class="thin-line">
-            <div class="footer">
-                <a href="https://t.me/S_O_S_P/1265">Download</a>
-                <i class="fas fa-download"></i>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-title">Design</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-title">Development</h3>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">⚡</div>
+                    <h3 class="skill-title">Optimization</h3>
+                </div>
             </div>
         </div>
-        <div class="module">
-            <div class="name">MULTI-TASK</div>
-            <div class="version">250714 by t.me/HoyoSlave</div>
-            <div class="description">increases system resource limits and disables background restrictions</div>
-            <hr class="thin-line">
-            <div class="footer">
-                <a href="https://t.me/S_O_S_P/1250">Download</a>
-                <i class="fas fa-download"></i>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <h2 class="section-title fade-in">Projects</h2>
+            
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">
+                        <img src="Pictures/cmd.jpg">
+                        <div class="portfolio-overlay">
+                            <a href="https://t.me/S_O_S_P/1265" class="portfolio-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">CMD-TWEAKS</h3>
+                        <p class="portfolio-description">AIO system optimization, wait until installed (every reboot)</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">DWYOR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">
+                        <img src="Pictures/mt.jpg">
+                        <div class="portfolio-overlay">
+                            <a href="https://t.me/S_O_S_P/1250" class="portfolio-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">MULTI-TASK</h3>
+                        <p class="portfolio-description">Increases system resource limits and disables background restrictions</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">DWYOR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">
+                        <img src="Pictures/shai.jpg">
+                        <div class="portfolio-overlay">
+                            <a href="https://t.me/S_O_S_P/1250" class="portfolio-link">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">SHELL-AI</h3>
+                        <p class="portfolio-description">Adapt to daily needs or gaming needs and other optimizations</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">DWYOR</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="module">
-            <div class="name">SHELL-AI</div>
-            <div class="version">250808 by t.me/HoyoSlave</div>
-            <div class="description">adapt to daily needs or gaming needs and other optimizations</div>
-            <hr class="thin-line">
-            <div class="footer">
-                <a href="https://t.me/S_O_S_P/1303">Download</a>
-                <i class="fas fa-download"></i>
-            </div>
-        </div>
-    </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
