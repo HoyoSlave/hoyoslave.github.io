@@ -90,16 +90,37 @@ p {
   padding: 0 2rem;
 }
 
+.hero-icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url("Pictures/pfp.jpg") center/cover no-repeat; /* bisa gambar profil */
+  margin: 0 auto 20px auto;
+  border: 3px solid #1919e6;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: fadeInUp 1s ease-out;
+}
+
 .hero-title {
-  color: #1919e6;
-  margin-bottom: 1rem;
+  color: #0000ff;
   animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+.hero-title a {
+  text-decoration: none;
+}
+
+.hero-title a:visited {
+  color: #0000ff;
+}
+
 .hero-subtitle {
+  display: inline-block;
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  background-color: rgba(25, 25, 230, 0.5);
   color: #d9d9d9;
-  margin-bottom: 0rem;
+  padding: 0rem 1rem;
+  border-radius: 45px;
   font-weight: 500;
   animation: fadeInUp 1s ease-out 0.4s both;
 }
@@ -107,55 +128,10 @@ p {
 .hero-description {
   font-size: 1.1rem;
   color: #cccccc;
-  margin-bottom: 1rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   animation: fadeInUp 1s ease-out 0.6s both;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: #1919e6;
-  color: #e6e6e6;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 45px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  animation: fadeInUp 1s ease-out 0.8s both;
-}
-
-.hero-scroll-indicator {
-  position: absolute;
-  bottom: 8rem;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: bounce 2s infinite;
-}
-
-.scroll-arrow {
-  width: 20px;
-  height: 20px;
-  border-right: 2px solid #e6e6e6;
-  border-bottom: 2px solid #e6e6e6;
-  transform: rotate(45deg);
-}
-
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
 }
 
 @keyframes fadeInUp {
@@ -299,12 +275,12 @@ p {
 }
 
 .tag {
-  background-color: #1919e6;
+  display: inline-block;
+  background-color: rgba(25, 25, 230, 0.5);
   color: #e6e6e6;
-  padding: 0.25rem 0.75rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  padding: 0rem 0.5rem;
+  border-radius: 45px;
+  font-size: 0.75rem;
 }
 
 /* Animations */
