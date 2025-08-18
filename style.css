@@ -106,14 +106,6 @@ p {
   animation: fadeInUp 1s ease-out 0.2s both;
 }
 
-.hero-title a {
-  text-decoration: none;
-}
-
-.hero-title a:visited {
-  color: #0000ff;
-}
-
 .hero-subtitle {
   display: inline-block;
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
@@ -126,12 +118,51 @@ p {
 }
 
 .hero-description {
+  margin-bottom: -0.5rem;
   font-size: 1.1rem;
   color: #cccccc;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.btn {
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 45px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  color: #e6e6e6;
+  border: 2px solid #1919e6;
+}
+
+.btn-primary:hover {
+  background-color: #e6e6e6;
+  color: #191919;
+}
+
+.btn-secondary {
+  color: #e6e6e6;
+  border: 2px solid #e6e619;
+}
+
+.btn-secondary:hover {
+  background-color: #e6e6e6;
+  color: #191919;
 }
 
 @keyframes fadeInUp {
