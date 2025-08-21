@@ -47,9 +47,9 @@ p {
 
 /* Container */
 .container {
+  padding: 0 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 /* Section */
@@ -133,7 +133,7 @@ p {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  animation: fadeInUp 1s ease-out 0.6s both;
+  animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .btn {
@@ -142,7 +142,6 @@ p {
   font-weight: 600;
   text-decoration: none;
   border-radius: 45px;
-  transition: all 0.3s ease;
 }
 
 .btn-primary {
@@ -168,7 +167,7 @@ p {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
@@ -176,47 +175,16 @@ p {
   }
 }
 
-/* Skills Section */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.skill-card {
-  background-color: #262626;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border: 1px solid #202020;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-}
-
-.skill-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.skill-title {
-  margin-bottom: 1rem;
-  color: #d9d9d9;
-}
-
-/* portofolio Section */
+/* Portofolio Section */
 .portofolio {
-  background-color: #191919;
+  min-height: 90vh;
+  background: #191919;
+  padding-bottom: 1rem;
 }
 
 .portofolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -225,7 +193,6 @@ p {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
   opacity: 1;
   transform: scale(1);
 }
@@ -244,7 +211,6 @@ p {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
 .portofolio-item:hover .portofolio-image img {
@@ -262,7 +228,6 @@ p {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 .portofolio-item:hover .portofolio-overlay {
@@ -276,7 +241,6 @@ p {
   padding: 0.5rem 1rem;
   border: 2px solid #e6e6e6;
   border-radius: 45px;
-  transition: all 0.3s ease;
 }
 
 .portofolio-link:hover {
@@ -318,49 +282,17 @@ p {
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s ease;
+  transition: all 1s ease;
 }
 
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+  transition: all 1s ease;
 }
 
 .fade-in.hidden-up {
   opacity: 0;
   transform: translateY(-30px);
-  transition: all 0.6s ease;
-}
-
-/* Responsive Design */
-@media (max-width: 810px) {
-  .container {
-    padding: 0 1.5rem;
-  }
-
-  .section {
-    padding: 4rem 0;
-  }
-
-  .portofolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 390px) {
-  .container {
-    padding: 0 1rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-container {
-    padding: 0 1rem;
-  }
+  transition: all 1s ease;
 }
