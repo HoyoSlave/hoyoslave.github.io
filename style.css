@@ -13,7 +13,7 @@ body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: #e6e6e6;
-  background-color: #191919;
+  background-color: #0f1419;
   overflow-x: hidden;
 }
 
@@ -81,7 +81,7 @@ p {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: #191919;
+  background: #0f1419;
 }
 
 .hero-container {
@@ -94,7 +94,7 @@ p {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: url("Pictures/pfp.jpg") center/cover no-repeat; /* bisa gambar profil */
+  background: url("Pictures/pfp.jpg") center/cover no-repeat;
   margin: 0 auto 20px auto;
   border: 3px solid #1919e6;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -151,7 +151,7 @@ p {
 
 .btn-primary:hover {
   background-color: #e6e6e6;
-  color: #191919;
+  color: #0f1419;
 }
 
 .btn-secondary {
@@ -161,7 +161,7 @@ p {
 
 .btn-secondary:hover {
   background-color: #e6e6e6;
-  color: #191919;
+  color: #0f1419;
 }
 
 @keyframes fadeInUp {
@@ -178,7 +178,7 @@ p {
 /* Portofolio Section */
 .portofolio {
   min-height: 90vh;
-  background: #191919;
+  background: #0f1419;
   padding-bottom: 1rem;
 }
 
@@ -189,8 +189,8 @@ p {
 }
 
 .portofolio-item {
-  background-color: #262626;
-  border-radius: 10px;
+  background-color: #191e23;
+  border-radius: 45px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   opacity: 1;
@@ -209,43 +209,8 @@ p {
 
 .portofolio-image img {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
-}
-
-.portofolio-item:hover .portofolio-image img {
-  transform: scale(1.1);
-}
-
-.portofolio-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(25, 25, 230, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-}
-
-.portofolio-item:hover .portofolio-overlay {
-  opacity: 1;
-}
-
-.portofolio-link {
-  color: #e6e6e6;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border: 2px solid #e6e6e6;
-  border-radius: 45px;
-}
-
-.portofolio-link:hover {
-  background-color: #e6e6e6;
-  color: #1919e6;
 }
 
 .portofolio-content {
