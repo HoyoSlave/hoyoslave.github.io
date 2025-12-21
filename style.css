@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  padding-bottom: 10%;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: #e6e6e6;
