@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -28,19 +28,19 @@
         box-sizing: border-box;
       }
       html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto; /* Animasi smooth scroll dihapus */
       }
       body {
         font-family: "Inter", sans-serif;
-        line-height: 1.6;
+        line-height: 1.5;
         color: #e6e6e6;
-        background-color: #0f1419;
+        background-color: #121318;
         overflow-x: hidden;
       }
 
-      /* HEADER BAR (Pfp Kecil & Tersusun Mendatar) */
+      /* HEADER BAR */
       .header-bar {
-        background-color: #191e23;
+        background-color: #1a1b22;
         padding: 1rem 2rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         display: flex;
@@ -55,120 +55,167 @@
         gap: 1rem;
       }
       .pfp-icon {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
         border-radius: 50%;
         background: url(Pictures/pfp.jpg) center/cover no-repeat;
-        border: 2px solid #1919e6;
+        border: 2px solid #5a5c70;
       }
       .profile-text h1 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 700;
-        color: #1919e6;
+        color: #fff;
       }
       .profile-text p {
         font-size: 0.85rem;
-        color: #ccc;
+        color: #9ba0a6;
       }
       .header-cta {
         display: flex;
         gap: 0.8rem;
       }
 
-      /* BUTTONS */
+      /* BUTTONS HEADER */
       .btn {
         padding: 0.5rem 1.2rem;
         font-size: 0.85rem;
         font-weight: 600;
         text-decoration: none;
         border-radius: 45px;
-        transition: 0.3s;
       }
       .btn-primary {
+        background-color: #3b3d4d;
         color: #fff;
-        border: 2px solid #1919e6;
       }
       .btn-primary:hover {
-        background: #1919e6;
+        background-color: #4a4d60;
       }
       .btn-secondary {
-        color: #fff;
-        border: 2px solid #e6e619;
+        background-color: transparent;
+        color: #e6e619;
+        border: 1px solid #e6e619;
       }
       .btn-secondary:hover {
-        background: #e6e619;
-        color: #000;
+        background-color: rgba(230, 230, 25, 0.1);
       }
 
       /* PORTFOLIO SECTION */
       .portofolio {
-        padding: 4rem 1.5rem;
-        max-width: 1000px;
+        padding: 3rem 1.5rem;
+        max-width: 800px;
         margin: 0 auto;
       }
       .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: #fff;
         text-align: center;
-        font-size: 2rem;
-        margin-bottom: 2.5rem;
-        color: #fff;
       }
-      .portofolio-grid {
+      .module-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-      }
-      .portofolio-item {
-        position: relative;
-        border-radius: 15px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        transition: transform 0.3s ease;
-      }
-      .portofolio-item:hover {
-        transform: translateY(-5px);
-        border-color: #1919e6;
-      }
-      .portofolio-image img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        display: block;
-        filter: brightness(40%); /* Membuat gambar gelap */
-        transition: filter 0.3s ease;
-      }
-      .portofolio-item:hover .portofolio-image img {
-        filter: brightness(60%); /* Sedikit lebih terang saat di-hover */
-      }
-      
-      /* TEXT OVERLAY PADA GAMBAR */
-      .portofolio-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 1.5rem;
-        pointer-events: none; /* Supaya klik tetap tembus ke tag <a> */
-      }
-      .portofolio-title {
-        color: #fff;
-        font-size: 1.2rem;
-        font-weight: 700;
-        margin-bottom: 0.2rem;
-      }
-      .portofolio-description {
-        color: #ddd;
-        font-size: 0.9rem;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
       }
 
-      /* ANIMASI FADE-IN */
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease;
+      /* MODULE CARD DESIGN */
+      .module-card {
+        position: relative;
+        border-radius: 20px;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        overflow: hidden;
+        background-color: #24252e; /* Fallback warna jika gambar gagal dimuat */
       }
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
+      
+      /* GAMBAR BACKGROUND CARD */
+      .module-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(75%); /* Kecerahan 25% = Dipergelap 75% */
+        z-index: 0;
+      }
+
+      /* KONTEN CARD (Di atas gambar) */
+      .module-header,
+      .module-desc,
+      .module-divider,
+      .module-footer {
+        position: relative;
+        z-index: 1;
+      }
+
+      .module-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .module-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 0.2rem;
+      }
+      .module-author {
+        font-size: 0.9rem;
+        color: #9ba0a6;
+        font-weight: 500;
+      }
+      
+      .module-dwyor {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #9ba0a6;
+        background-color: rgba(49, 51, 64, 0.8);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        letter-spacing: 0.5px;
+      }
+
+      .module-desc {
+        font-size: 0.95rem;
+        color: #d1d3d9;
+        font-weight: 500;
+        margin-top: 0.2rem;
+      }
+
+      .module-divider {
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.15);
+        margin: 0.5rem 0;
+      }
+
+      .module-footer {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      /* INSTALL BUTTON */
+      .btn-install {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #3b3d4d;
+        color: #e2e2e9;
+        padding: 0.5rem 1rem;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      .btn-install:hover {
+        background-color: #4c4e63;
+      }
+      .btn-install svg {
+        width: 18px;
+        height: 18px;
+        fill: currentColor;
       }
 
       /* RESPONSIVE MOBILE */
@@ -179,16 +226,18 @@
         }
         .profile-info {
           flex-direction: column;
+          gap: 0.5rem;
         }
-        .portofolio-grid {
-          grid-template-columns: 1fr;
+        .module-card {
+          padding: 1rem 1.25rem;
         }
       }
     </style>
   </head>
   <body>
     
-    <header class="header-bar fade-in">
+    <!-- HEADER BAR -->
+    <header class="header-bar">
       <div class="profile-info">
         <div class="pfp-icon"></div>
         <div class="profile-text">
@@ -202,64 +251,72 @@
       </div>
     </header>
 
+    <!-- PROJECT SECTION (MODULES) -->
     <section id="portofolio" class="portofolio">
-      <h2 class="section-title fade-in">Projects</h2>
-      <div class="portofolio-grid">
+      <h2 class="section-title">Projects</h2>
+      <div class="module-grid">
         
-        <div class="portofolio-item fade-in">
-          <a href="https://t.me/S_O_S_P/2329" style="text-decoration: none;">
-            <div class="portofolio-image">
-              <img src="Pictures/cmd.jpg" alt="CMD" />
+        <!-- MODULE 1 -->
+        <div class="module-card">
+          <img src="Pictures/cmd.jpg" class="module-bg" alt="CMD Background" />
+          <div class="module-header">
+            <div class="module-info">
+              <h3 class="module-title">CMD-Tweaks</h3>
+              <div class="module-author">Author: t.me/HoyoSlave</div>
             </div>
-            <div class="portofolio-content">
-              <h3 class="portofolio-title">CMD-Tweaks</h3>
-              <p class="portofolio-description">AIO system optimization (main project)</p>
-            </div>
-          </a>
+            <div class="module-dwyor">DWYOR</div>
+          </div>
+          <div class="module-desc">AIO system optimization (main project)</div>
+          <div class="module-divider"></div>
+          <div class="module-footer">
+            <a href="https://t.me/S_O_S_P/2329" class="btn-install" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Install
+            </a>
+          </div>
         </div>
 
-        <div class="portofolio-item fade-in">
-          <a href="https://t.me/S_O_S_P/1763" style="text-decoration: none;">
-            <div class="portofolio-image">
-              <img src="Pictures/sac.jpg" alt="SAC" />
+        <!-- MODULE 2 -->
+        <div class="module-card">
+          <img src="Pictures/sac.jpg" class="module-bg" alt="SAC Background" />
+          <div class="module-header">
+            <div class="module-info">
+              <h3 class="module-title">Shell-Ascend</h3>
+              <div class="module-author">Author: t.me/HoyoSlave</div>
             </div>
-            <div class="portofolio-content">
-              <h3 class="portofolio-title">Shell-Ascend</h3>
-              <p class="portofolio-description">System tuning tool (main project)</p>
-            </div>
-          </a>
+            <div class="module-dwyor">DWYOR</div>
+          </div>
+          <div class="module-desc">System tuning tool (main project)</div>
+          <div class="module-divider"></div>
+          <div class="module-footer">
+            <a href="https://t.me/S_O_S_P/1763" class="btn-install" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Install
+            </a>
+          </div>
         </div>
 
-        <div class="portofolio-item fade-in">
-          <a href="https://t.me/S_O_S_P/1682" style="text-decoration: none;">
-            <div class="portofolio-image">
-              <img src="Pictures/uec.jpg" alt="UEC" />
+        <!-- MODULE 3 -->
+        <div class="module-card">
+          <img src="Pictures/uec.jpg" class="module-bg" alt="UEC Background" />
+          <div class="module-header">
+            <div class="module-info">
+              <h3 class="module-title">Unreal-Config</h3>
+              <div class="module-author">Author: t.me/HoyoSlave</div>
             </div>
-            <div class="portofolio-content">
-              <h3 class="portofolio-title">Unreal-Config</h3>
-              <p class="portofolio-description">Adjust unreal engine graphics quality</p>
-            </div>
-          </a>
+            <div class="module-dwyor">DWYOR</div>
+          </div>
+          <div class="module-desc">Adjust unreal engine graphics quality</div>
+          <div class="module-divider"></div>
+          <div class="module-footer">
+            <a href="https://t.me/S_O_S_P/1682" class="btn-install" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Install
+            </a>
+          </div>
         </div>
 
       </div>
     </section>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const observer = new IntersectionObserver(
-          entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting)
-                entry.target.classList.add("visible");
-            });
-          },
-          { threshold: 0.1 }
-        );
-        document
-          .querySelectorAll(".fade-in")
-          .forEach(el => observer.observe(el));
-      });
-    </script>
   </body>
 </html>
