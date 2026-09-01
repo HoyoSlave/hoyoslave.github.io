@@ -37,148 +37,48 @@
         background-color: #0f1419;
         overflow-x: hidden;
       }
-      h1,
-      h2,
-      h3 {
-        font-weight: 600;
-        line-height: 1.2;
-      }
-      h1 {
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 700;
-      }
-      h2 {
-        font-size: clamp(2rem, 4vw, 3rem);
-      }
-      h3 {
-        font-size: 1.1rem;
-      }
-      .container {
-        padding: 0 1.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .hero {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #0f1419;
-      }
-      .hero-container {
-        text-align: center;
-        max-width: 800px;
-      }
-      .hero-icon {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        background: url(Pictures/pfp.jpg) center/cover no-repeat;
-        margin: 0 auto 20px;
-        border: 3px solid #1919e6;
-        box-shadow: 0 4px 15px rgba(25, 25, 230, 0.3);
-      }
-      .hero-title {
-        color: #1919e6;
-        margin-bottom: 0.5rem;
-      }
-      .hero-subtitle {
-        display: inline-block;
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        background-color: rgba(25, 25, 230, 0.2);
-        color: #d9d9d9;
-        padding: 0.2rem 1rem;
-        border-radius: 45px;
-        font-weight: 500;
-        margin-bottom: 1.5rem;
-      }
-      .hero-description {
-        color: #ccc;
-        margin: -16px;
-      }
-      .hero-cta {
-        margin-top: 2rem;
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-      }
-      .portofolio {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background: #0f1419;
-        padding: 4rem 0;
-      }
-      .section-title {
-        text-align: center;
-        margin-bottom: 3.5rem;
-        position: relative;
-      }
-      .section-title::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50px;
-        height: 2px;
-        background-color: #1919e6;
-      }
-      .portofolio-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        max-width: 900px;
-        margin: 0 auto;
-      }
-      .portofolio-item {
+
+      /* HEADER BAR (Pfp Kecil & Tersusun Mendatar) */
+      .header-bar {
         background-color: #191e23;
-        border-radius: 25px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-      }
-      .portofolio-item:hover {
-        transform: translateY(-8px);
-        border-color: #1919e6;
-      }
-      .portofolio-image img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-      }
-      .portofolio-content {
-        padding: 1.5rem;
-      }
-      .portofolio-header {
-        margin-top: -8px;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 0.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
       }
-      .portofolio-title {
-        color: #fff;
-        margin: 0;
-        white-space: nowrap;
+      .profile-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
       }
-      .tag {
-        background-color: rgba(25, 25, 230, 0.3);
-        color: #8a8aff;
-        padding: 2px 10px;
-        border-radius: 45px;
-        font-size: 0.65rem;
+      .pfp-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: url(Pictures/pfp.jpg) center/cover no-repeat;
+        border: 2px solid #1919e6;
+      }
+      .profile-text h1 {
+        font-size: 1.2rem;
         font-weight: 700;
-        border: 1px solid rgba(25, 25, 230, 0.5);
-        flex-shrink: 0;
+        color: #1919e6;
       }
-      .portofolio-description {
-        color: #aaa;
-        font-size: 0.9rem;
+      .profile-text p {
+        font-size: 0.85rem;
+        color: #ccc;
       }
+      .header-cta {
+        display: flex;
+        gap: 0.8rem;
+      }
+
+      /* BUTTONS */
       .btn {
-        padding: 0.75rem 1.75rem;
-        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
         font-weight: 600;
         text-decoration: none;
         border-radius: 45px;
@@ -199,102 +99,152 @@
         background: #e6e619;
         color: #000;
       }
+
+      /* PORTFOLIO SECTION */
+      .portofolio {
+        padding: 4rem 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+        color: #fff;
+      }
+      .portofolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      .portofolio-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: transform 0.3s ease;
+      }
+      .portofolio-item:hover {
+        transform: translateY(-5px);
+        border-color: #1919e6;
+      }
+      .portofolio-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        filter: brightness(40%); /* Membuat gambar gelap */
+        transition: filter 0.3s ease;
+      }
+      .portofolio-item:hover .portofolio-image img {
+        filter: brightness(60%); /* Sedikit lebih terang saat di-hover */
+      }
+      
+      /* TEXT OVERLAY PADA GAMBAR */
+      .portofolio-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem;
+        pointer-events: none; /* Supaya klik tetap tembus ke tag <a> */
+      }
+      .portofolio-title {
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+      }
+      .portofolio-description {
+        color: #ddd;
+        font-size: 0.9rem;
+      }
+
+      /* ANIMASI FADE-IN */
       .fade-in {
         opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
       }
       .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
       }
+
+      /* RESPONSIVE MOBILE */
       @media (max-width: 768px) {
+        .header-bar {
+          justify-content: center;
+          text-align: center;
+        }
+        .profile-info {
+          flex-direction: column;
+        }
         .portofolio-grid {
           grid-template-columns: 1fr;
-          max-width: 400px;
         }
       }
     </style>
   </head>
   <body>
-    <section id="home" class="hero">
-      <div class="hero-container">
-        <div class="hero-content fade-in">
-          <div class="hero-icon"></div>
-          <h1 class="hero-title">Alfana Sofyan</h1>
-          <p class="hero-subtitle">Creative & Problem Solver</p>
-          <div class="hero-description">
-            <p>Developing shell scripts to optimize</p>
-            <p>& Improve Android performance</p>
-          </div>
-          <div class="hero-cta">
-            <a href="https://t.me/hoyoslave" class="btn btn-primary"
-              >Contact</a
-            >
-            <a
-              href="https://t.me/S_O_S_P/5"
-              class="btn btn-secondary"
-              >Donate</a
-            >
-          </div>
+    
+    <header class="header-bar fade-in">
+      <div class="profile-info">
+        <div class="pfp-icon"></div>
+        <div class="profile-text">
+          <h1>Alfana Sofyan</h1>
+          <p>Developing shell scripts to optimize & improve Android performance</p>
         </div>
       </div>
-    </section>
+      <div class="header-cta">
+        <a href="https://t.me/hoyoslave" class="btn btn-primary">Contact</a>
+        <a href="https://t.me/S_O_S_P/5" class="btn btn-secondary">Donate</a>
+      </div>
+    </header>
+
     <section id="portofolio" class="portofolio">
-      <div class="container">
-        <h2 class="section-title fade-in">Projects</h2>
-        <div class="portofolio-grid">
-          <div class="portofolio-item fade-in">
+      <h2 class="section-title fade-in">Projects</h2>
+      <div class="portofolio-grid">
+        
+        <div class="portofolio-item fade-in">
+          <a href="https://t.me/S_O_S_P/2329" style="text-decoration: none;">
             <div class="portofolio-image">
-              <a href="https://t.me/S_O_S_P/2329"
-                ><img src="Pictures/cmd.jpg" alt="CMD"
-              /></a>
+              <img src="Pictures/cmd.jpg" alt="CMD" />
             </div>
             <div class="portofolio-content">
-              <div class="portofolio-header">
-                <h3 class="portofolio-title">CMD-Tweaks</h3>
-                <span class="tag">DWYOR</span>
-              </div>
-              <p class="portofolio-description">
-                AIO system optimization (main project)
-              </p>
+              <h3 class="portofolio-title">CMD-Tweaks</h3>
+              <p class="portofolio-description">AIO system optimization (main project)</p>
             </div>
-          </div>
-          <div class="portofolio-item fade-in">
-            <div class="portofolio-image">
-              <a href="https://t.me/S_O_S_P/1763"
-                ><img src="Pictures/sac.jpg" alt="SAC"
-              /></a>
-            </div>
-            <div class="portofolio-content">
-              <div class="portofolio-header">
-                <h3 class="portofolio-title">Shell-Ascend</h3>
-                <span class="tag">DWYOR</span>
-              </div>
-              <p class="portofolio-description">
-                System tuning tool (main project)
-              </p>
-            </div>
-          </div>
-          <div class="portofolio-item fade-in">
-            <div class="portofolio-image">
-              <a href="https://t.me/S_O_S_P/1682"
-                ><img src="Pictures/uec.jpg" alt="UEC"
-              /></a>
-            </div>
-            <div class="portofolio-content">
-              <div class="portofolio-header">
-                <h3 class="portofolio-title">Unreal-Config</h3>
-                <span class="tag">DWYOR</span>
-              </div>
-              <p class="portofolio-description">
-                Adjust unreal engine graphics quality
-              </p>
-            </div>
-          </div>
+          </a>
         </div>
+
+        <div class="portofolio-item fade-in">
+          <a href="https://t.me/S_O_S_P/1763" style="text-decoration: none;">
+            <div class="portofolio-image">
+              <img src="Pictures/sac.jpg" alt="SAC" />
+            </div>
+            <div class="portofolio-content">
+              <h3 class="portofolio-title">Shell-Ascend</h3>
+              <p class="portofolio-description">System tuning tool (main project)</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="portofolio-item fade-in">
+          <a href="https://t.me/S_O_S_P/1682" style="text-decoration: none;">
+            <div class="portofolio-image">
+              <img src="Pictures/uec.jpg" alt="UEC" />
+            </div>
+            <div class="portofolio-content">
+              <h3 class="portofolio-title">Unreal-Config</h3>
+              <p class="portofolio-description">Adjust unreal engine graphics quality</p>
+            </div>
+          </a>
+        </div>
+
       </div>
     </section>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const observer = new IntersectionObserver(
