@@ -28,7 +28,7 @@
         box-sizing: border-box;
       }
       html {
-        scroll-behavior: auto; /* Animasi smooth scroll dihapus */
+        scroll-behavior: auto; 
       }
       body {
         font-family: "Inter", sans-serif;
@@ -127,9 +127,22 @@
         gap: 0.8rem;
         border: 1px solid rgba(255, 255, 255, 0.05);
         overflow: hidden;
-        background-color: #24252e; /* Fallback warna jika gambar gagal dimuat */
+        background-color: #292934; /* Warna dasar card */
       }
       
+      /* LAPISAN WARNA 50% (OVERLAY) */
+      .module-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Warna diambil dari card di gambar dengan transparansi 50% */
+        background-color: rgba(41, 41, 52, 0.6); 
+        z-index: 1;
+      }
+
       /* GAMBAR BACKGROUND CARD */
       .module-bg {
         position: absolute;
@@ -138,17 +151,16 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(75%); /* Kecerahan 25% = Dipergelap 75% */
         z-index: 0;
       }
 
-      /* KONTEN CARD (Di atas gambar) */
+      /* KONTEN CARD (Z-index dinaikkan agar berada di atas overlay dan gambar) */
       .module-header,
       .module-desc,
       .module-divider,
       .module-footer {
         position: relative;
-        z-index: 1;
+        z-index: 2; 
       }
 
       .module-header {
@@ -164,15 +176,15 @@
       }
       .module-author {
         font-size: 0.9rem;
-        color: #9ba0a6;
+        color: #b0b4ba;
         font-weight: 500;
       }
       
       .module-dwyor {
         font-size: 0.8rem;
         font-weight: 700;
-        color: #9ba0a6;
-        background-color: rgba(49, 51, 64, 0.8);
+        color: #b0b4ba;
+        background-color: rgba(49, 51, 64, 0.9);
         padding: 0.3rem 0.8rem;
         border-radius: 20px;
         letter-spacing: 0.5px;
