@@ -18,31 +18,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <style>
+      @font-face {
+        font-family: 'woff2';
+        src: url('woff2') format('woff2');
+      }
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: woff2;
+        -webkit-tap-highlight-color: transparent;
       }
       html {
-        scroll-behavior: auto; 
+        scroll-behavior: auto;
       }
       body {
         font-family: "Inter", sans-serif;
         line-height: 1.5;
-        color: #e6e6e6;
-        background-color: #121318;
+        color: #e6e4f0;
+        background-color: #191920;
         overflow-x: hidden;
       }
-
-      /* HEADER BAR */
       .header-bar {
-        background-color: #1a1b22;
+        background-color: #25252e;
         padding: 1rem 2rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.04);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -57,277 +61,245 @@
       .pfp-icon {
         width: 55px;
         height: 55px;
+        min-width: 55px;
         border-radius: 50%;
         background: url(Pictures/pfp.jpg) center/cover no-repeat;
-        border: 2px solid #5a5c70;
+        border: 2px solid #5a5475;
       }
       .profile-text h1 {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #fff;
+        font-size: 1rem;
+        font-weight: 900;
       }
       .profile-text p {
-        font-size: 0.85rem;
-        color: #9ba0a6;
+        font-size: 0.8rem;
       }
       .header-cta {
         display: flex;
         gap: 0.8rem;
+        flex: 1;
+        max-width: 400px;
       }
-
-      /* BUTTONS HEADER */
       .btn {
-        padding: 0.5rem 1.2rem;
-        font-size: 0.85rem;
+        flex: 1;
+        text-align: center;
+        padding: 0.75rem 1.2rem;
+        font-size: 1rem;
         font-weight: 600;
         text-decoration: none;
         border-radius: 45px;
       }
       .btn-primary {
-        background-color: #3b3d4d;
-        color: #fff;
+        background-color: #c2c3ee;
+        color: #3b3d61;
       }
       .btn-primary:hover {
-        background-color: #4a4d60;
+        background-color: #c2c3eebf;
       }
       .btn-secondary {
         background-color: transparent;
-        color: #e6e619;
-        border: 1px solid #e6e619;
+        color: #0000ffbf;
+        border: 1px solid #0000ffbf;
       }
       .btn-secondary:hover {
-        background-color: rgba(230, 230, 25, 0.1);
+        background-color: #0000ff40;
       }
-
-      /* PORTFOLIO SECTION */
       .portofolio {
-        padding: 3rem 1.5rem;
+        padding: 1rem;
         max-width: 800px;
         margin: 0 auto;
-      }
-      .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-        color: #fff;
-        text-align: center;
       }
       .module-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.2rem;
       }
-
-      /* MODULE CARD DESIGN */
       .module-card {
         position: relative;
         border-radius: 20px;
-        padding: 1.25rem 1.5rem;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.04);
         display: flex;
         flex-direction: column;
-        gap: 0.8rem;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        overflow: hidden;
-        background-color: #292934; /* Warna dasar card */
       }
-      
-      /* LAPISAN WARNA 50% (OVERLAY) */
-      .module-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /* Warna diambil dari card di gambar dengan transparansi 50% */
-        background-color: rgba(41, 41, 52, 0.6); 
-        z-index: 1;
-      }
-
-      /* GAMBAR BACKGROUND CARD */
       .module-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
+        height: auto;
+        display: block;
         object-fit: cover;
         z-index: 0;
       }
-
-      /* KONTEN CARD (Z-index dinaikkan agar berada di atas overlay dan gambar) */
-      .module-header,
-      .module-desc,
-      .module-divider,
-      .module-footer {
-        position: relative;
-        z-index: 2; 
+      .module-content-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1.1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0.4rem;
+        background-color: rgba(35, 34, 48, 0.75);
+        z-index: 1;
       }
-
       .module-header {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
       }
       .module-title {
-        font-size: 1.25rem;
+        font-size: 1rem;
         font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 0.2rem;
+        margin-bottom: -0.25rem;
       }
       .module-author {
-        font-size: 0.9rem;
-        color: #b0b4ba;
+        font-size: 0.8rem;
+        color: #e6e4f0bf;
         font-weight: 500;
       }
-      
       .module-dwyor {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #b0b4ba;
-        background-color: rgba(49, 51, 64, 0.9);
-        padding: 0.3rem 0.8rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 900;
+        color: #3b3d61;
+        background-color: #c2c3ee;
+        padding: 0.5rem 1rem;
         border-radius: 20px;
         letter-spacing: 0.5px;
+        line-height: 1;
       }
-
       .module-desc {
-        font-size: 0.95rem;
-        color: #d1d3d9;
+        font-size: 0.9rem;
+        color: #e6e4f0bf;
         font-weight: 500;
-        margin-top: 0.2rem;
       }
-
       .module-divider {
         height: 1px;
-        background-color: rgba(255, 255, 255, 0.15);
-        margin: 0.5rem 0;
+        background-color: rgba(255, 255, 255, 0.08);
+        margin: auto 0 0.2rem 0;
       }
-
       .module-footer {
         display: flex;
         justify-content: flex-end;
       }
-
-      /* INSTALL BUTTON */
       .btn-install {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
-        background-color: #3b3d4d;
-        color: #e2e2e9;
+        background-color: #393a4d;
+        color: #e6e4f0bf;
         padding: 0.5rem 1rem;
-        border-radius: 12px;
+        border-radius: 20px;
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 600;
       }
       .btn-install:hover {
-        background-color: #4c4e63;
+        background-color: #4c4675;
       }
       .btn-install svg {
         width: 18px;
         height: 18px;
         fill: currentColor;
       }
-
-      /* RESPONSIVE MOBILE */
       @media (max-width: 768px) {
         .header-bar {
           justify-content: center;
-          text-align: center;
+          text-align: left;
         }
         .profile-info {
-          flex-direction: column;
-          gap: 0.5rem;
+          text-align: left;
+          width: 100%;
         }
-        .module-card {
+        .header-cta {
+          width: 100%;
+          justify-content: center;
+          max-width: 100%;
+        }
+        .module-content-overlay {
           padding: 1rem 1.25rem;
         }
       }
     </style>
   </head>
   <body>
-    
-    <!-- HEADER BAR -->
     <header class="header-bar">
       <div class="profile-info">
-        <div class="pfp-icon"></div>
+        <a href="https://github.com/HoyoSlave" class="pfp-icon"></a>
         <div class="profile-text">
-          <h1>Alfana Sofyan</h1>
-          <p>Developing shell scripts to optimize & improve Android performance</p>
+          <h1>Owner SOSP | Alfana Sofyan</h1>
+          <p>Developing shell scripts to optimize and improve Android performance</p>
         </div>
       </div>
       <div class="header-cta">
-        <a href="https://t.me/hoyoslave" class="btn btn-primary">Contact</a>
+        <a href="https://t.me/HoyoSlave" class="btn btn-primary">Contact</a>
         <a href="https://t.me/S_O_S_P/5" class="btn btn-secondary">Donate</a>
       </div>
     </header>
-
-    <!-- PROJECT SECTION (MODULES) -->
     <section id="portofolio" class="portofolio">
-      <h2 class="section-title">Projects</h2>
       <div class="module-grid">
-        
-        <!-- MODULE 1 -->
         <div class="module-card">
           <img src="Pictures/cmd.jpg" class="module-bg" alt="CMD Background" />
-          <div class="module-header">
-            <div class="module-info">
-              <h3 class="module-title">CMD-Tweaks</h3>
-              <div class="module-author">Author: t.me/HoyoSlave</div>
+          <div class="module-content-overlay">
+            <div class="module-header">
+              <div class="module-info">
+                <h3 class="module-title">CMD-Tweaks</h3>
+                <div class="module-author">Author: t.me/HoyoSlave</div>
+              </div>
+              <div class="module-dwyor">DWYOR</div>
             </div>
-            <div class="module-dwyor">DWYOR</div>
-          </div>
-          <div class="module-desc">AIO system optimization (main project)</div>
-          <div class="module-divider"></div>
-          <div class="module-footer">
-            <a href="https://t.me/S_O_S_P/2329" class="btn-install" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Install
-            </a>
+            <div class="module-desc">AIO system optimization (main project)</div>
+            <div class="module-divider"></div>
+            <div class="module-footer">
+              <a href="https://t.me/S_O_S_P/2329" class="btn-install" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                Install
+              </a>
+            </div>
           </div>
         </div>
-
-        <!-- MODULE 2 -->
         <div class="module-card">
           <img src="Pictures/sac.jpg" class="module-bg" alt="SAC Background" />
-          <div class="module-header">
-            <div class="module-info">
-              <h3 class="module-title">Shell-Ascend</h3>
-              <div class="module-author">Author: t.me/HoyoSlave</div>
+          <div class="module-content-overlay">
+            <div class="module-header">
+              <div class="module-info">
+                <h3 class="module-title">Shell-Ascend</h3>
+                <div class="module-author">Author: t.me/HoyoSlave</div>
+              </div>
+              <div class="module-dwyor">DWYOR</div>
             </div>
-            <div class="module-dwyor">DWYOR</div>
-          </div>
-          <div class="module-desc">System tuning tool (main project)</div>
-          <div class="module-divider"></div>
-          <div class="module-footer">
-            <a href="https://t.me/S_O_S_P/1763" class="btn-install" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Install
-            </a>
+            <div class="module-desc">System tuning tool (main project)</div>
+            <div class="module-divider"></div>
+            <div class="module-footer">
+              <a href="https://t.me/S_O_S_P/1763" class="btn-install" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                Install
+              </a>
+            </div>
           </div>
         </div>
-
-        <!-- MODULE 3 -->
         <div class="module-card">
           <img src="Pictures/uec.jpg" class="module-bg" alt="UEC Background" />
-          <div class="module-header">
-            <div class="module-info">
-              <h3 class="module-title">Unreal-Config</h3>
-              <div class="module-author">Author: t.me/HoyoSlave</div>
+          <div class="module-content-overlay">
+            <div class="module-header">
+              <div class="module-info">
+                <h3 class="module-title">Unreal-Config</h3>
+                <div class="module-author">Author: t.me/HoyoSlave</div>
+              </div>
+              <div class="module-dwyor">DWYOR</div>
             </div>
-            <div class="module-dwyor">DWYOR</div>
-          </div>
-          <div class="module-desc">Adjust unreal engine graphics quality</div>
-          <div class="module-divider"></div>
-          <div class="module-footer">
-            <a href="https://t.me/S_O_S_P/1682" class="btn-install" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-              Install
-            </a>
+            <div class="module-desc">Adjust unreal engine graphics quality</div>
+            <div class="module-divider"></div>
+            <div class="module-footer">
+              <a href="https://t.me/S_O_S_P/1682" class="btn-install" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                Install
+              </a>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   </body>
