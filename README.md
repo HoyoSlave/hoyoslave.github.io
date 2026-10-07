@@ -1,4 +1,7 @@
-<h1 align="center">Farel Nova A.</h1>
+<h1 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=0E75B6&center=true&vCenter=true&width=500&lines=Hi+%F0%9F%90%8B%2C+I'm+Farel+Nova+A.;Software+Developer+from+Indonesia;Passionate+about+Tech+%26+Code" alt="Typing SVG" />
+</h1>
+
 <p align="center">
   <strong>Software Developer | Tech Enthusiast | Open Source Contributor</strong>
 </p>
@@ -13,9 +16,9 @@
 
 ## 📌 About Me
 
-- 🔭 Currently focusing on software development and open-source contributions.
-- 💼 Passionate about building impactful applications and exploring system engineering.
-- ⚡ Always eager to learn modern frameworks and technical stack.
+- 🔭 Currently working on exciting open-source and software development projects.
+- 💼 Passionate about building impactful applications, systems, and developer tools.
+- ⚡ Always eager to learn new technologies and improve coding skills.
 
 ---
 
