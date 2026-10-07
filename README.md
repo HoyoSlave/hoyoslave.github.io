@@ -49,4 +49,16 @@
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img height="165" src="
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs?username=youngupdatesource&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+  <img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=youngupdatesource&theme=tokyonight&hide_border=true" alt="Streak Stats" />
+</p>
+
+---
+
+## 🌐 Connect with Me
+
+<p align="left">
+  <a href="https://www.youtube.com/c/RelJawa" target="_blank">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube" />
+  </a>
+</p>
